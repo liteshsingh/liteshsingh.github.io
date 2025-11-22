@@ -16,6 +16,8 @@
             --gray: #6C757D;
             --light-gray: #E9ECEF;
             --success: #28A745;
+            --warning: #FFC107;
+            --danger: #DC3545;
             --transition: all 0.3s ease;
             --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
             --shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.15);
@@ -433,7 +435,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTAwMCAxMDAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMxQTJCNEMiLz48cGF0aCBkPSJNMCA0MDBMMTAwMCA0MDBMMTAwMCA2MDBMMCA2MDBaIiBmaWxsPSIjMkE0RDZFIi8+PHBhdGggZD0iTTAgNjAwTDEwMDAgNjAwTDEwMDAgODAwTDAgODAwWiIgZmlsbD0iIzNBN0NBNSIvPjwvc3ZnPg==');
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTAwMCAxMDAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMxQTJCNEMiLz48cGF0aCBkPSJNMCA0MDBMMTAwMCA0MDBMMTAwMCA2MDBMMCA2MDBaIiBmaWxsPSIjMkE0RDZFIi8+PHBhdGggZD0iTTAgNjAwTDEwMDAgNjAwTDEwMDAgODAwTDAgODAwWiIgZpbGw9IiMzQTdDQTUiLz48L3N2Zz4=');
             opacity: 0.1;
         }
         
@@ -506,6 +508,320 @@
         .step h3 {
             color: var(--primary);
             margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        /* Team Engagement & Collaboration */
+        .team-collaboration {
+            background-color: white;
+        }
+        
+        .collaboration-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .collaboration-card {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .collaboration-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent) 0%, var(--accent-dark) 100%);
+        }
+        
+        .collaboration-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .collaboration-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 2rem;
+        }
+        
+        .collaboration-card h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+        
+        /* Performance Factors */
+        .performance-factors {
+            background-color: var(--light);
+        }
+        
+        .performance-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .performance-content {
+            padding-right: 2rem;
+        }
+        
+        .performance-visual {
+            position: relative;
+            height: 400px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .performance-visual:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTAwMCAxMDAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMxQTJCNEMiLz48cGF0aCBkPSJNMCA0MDBMMTAwMCA0MDBMMTAwMCA2MDBMMCA2MDBaIiBmaWxsPSIjMkE0RDZFIi8+PHBhdGggZD0iTTAgNjAwTDEwMDAgNjAwTDEwMDAgODAwTDAgODAwWiIgZmlsbD0iIzNBN0NBNSIvPjwvc3ZnPg==');
+            opacity: 0.1;
+        }
+        
+        .factor-list {
+            list-style: none;
+        }
+        
+        .factor-item {
+            margin-bottom: 2rem;
+            padding-left: 3rem;
+            position: relative;
+        }
+        
+        .factor-item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 20px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+        
+        .factor-item h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        
+        /* Risk Factors */
+        .risk-factors {
+            background-color: white;
+        }
+        
+        .risk-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .risk-card {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-left: 4px solid var(--accent);
+        }
+        
+        .risk-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .risk-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(220, 53, 69, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: #DC3545;
+            font-size: 1.5rem;
+        }
+        
+        .risk-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        /* Vision Section */
+        .vision {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .vision:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTAwMCAxMDAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMxQTJCNEMiLz48cGF0aCBkPSJNMCA0MDBMMTAwMCA0MDBMMTAwMCA2MDBMMCA2MDBaIiBmaWxsPSIjMkE0RDZFIi8+PHBhdGggZD0iTTAgNjAwTDEwMDAgNjAwTDEwMDAgODAwTDAgODAwWiIgZmlsbD0iIzNBN0NBNSIvPjwvc3ZnPg==');
+            opacity: 0.1;
+        }
+        
+        .vision-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .vision-icon {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            color: var(--accent);
+        }
+        
+        .vision h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .vision p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        /* Why Choose Us */
+        .why-choose {
+            background-color: var(--light);
+        }
+        
+        .unique-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .feature-card {
+            background-color: white;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 1.8rem;
+        }
+        
+        .feature-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        /* Competitive Differentiators */
+        .differentiators {
+            background-color: white;
+        }
+        
+        .diff-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .diff-content {
+            padding-right: 2rem;
+        }
+        
+        .diff-visual {
+            position: relative;
+            height: 400px;
+            background: var(--light);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 2px dashed var(--accent);
+        }
+        
+        .diff-list {
+            list-style: none;
+        }
+        
+        .diff-item {
+            margin-bottom: 2rem;
+            padding-left: 3rem;
+            position: relative;
+        }
+        
+        .diff-item:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 25px;
+            height: 25px;
+            background: var(--accent);
+            border-radius: 50%;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .diff-item h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
             font-size: 1.3rem;
         }
         
@@ -680,8 +996,15 @@
         
         /* Responsive */
         @media (max-width: 992px) {
-            .ps-container {
+            .ps-container,
+            .performance-container,
+            .diff-container {
                 grid-template-columns: 1fr;
+            }
+            
+            .performance-content,
+            .diff-content {
+                padding-right: 0;
             }
             
             .approach-steps:before {
@@ -744,9 +1067,9 @@
                 </div>
                 <ul class="nav-links">
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#benefits">Benefits</a></li>
-                    <li><a href="#approach">Approach</a></li>
-                    <li><a href="#clients">Clients</a></li>
+                    <li><a href="#collaboration">Collaboration</a></li>
+                    <li><a href="#performance">Performance</a></li>
+                    <li><a href="#why-choose">Why Choose Us</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <button class="cta-button">Get Started</button>
@@ -967,6 +1290,199 @@
         </div>
     </section>
 
+    <!-- Team Engagement & Collaboration -->
+    <section id="collaboration" class="team-collaboration">
+        <div class="container">
+            <div class="section-title">
+                <h2>Team Engagement & Collaboration</h2>
+                <p>Breaking down silos and fostering seamless teamwork across departments</p>
+            </div>
+            <div class="collaboration-grid">
+                <div class="collaboration-card fade-in">
+                    <div class="collaboration-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Unified Communication</h3>
+                    <p>Integrate communication channels to eliminate information gaps between teams and departments.</p>
+                </div>
+                <div class="collaboration-card fade-in">
+                    <div class="collaboration-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Cross-Functional Workflows</h3>
+                    <p>Design processes that span multiple departments, ensuring seamless handoffs and accountability.</p>
+                </div>
+                <div class="collaboration-card fade-in">
+                    <div class="collaboration-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Real-Time Visibility</h3>
+                    <p>Provide transparent progress tracking and status updates accessible to all stakeholders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Factors -->
+    <section id="performance" class="performance-factors">
+        <div class="container">
+            <div class="section-title">
+                <h2>Analysis of Performance Factors</h2>
+                <p>Key metrics and indicators that drive organizational success</p>
+            </div>
+            <div class="performance-container">
+                <div class="performance-content">
+                    <ul class="factor-list">
+                        <li class="factor-item fade-in">
+                            <h3>Operational Efficiency</h3>
+                            <p>Measure process cycle times, resource utilization, and throughput to identify optimization opportunities.</p>
+                        </li>
+                        <li class="factor-item fade-in">
+                            <h3>Team Productivity</h3>
+                            <p>Track output quality, task completion rates, and collaboration effectiveness across teams.</p>
+                        </li>
+                        <li class="factor-item fade-in">
+                            <h3>Technology Performance</h3>
+                            <p>Monitor system uptime, response times, and integration effectiveness to ensure optimal tool performance.</p>
+                        </li>
+                        <li class="factor-item fade-in">
+                            <h3>Quality Metrics</h3>
+                            <p>Evaluate error rates, rework requirements, and customer satisfaction to maintain high standards.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="performance-visual fade-in">
+                    <!-- Performance visualization would go here -->
+                    <div style="color: white; text-align: center; padding: 2rem;">
+                        <i class="fas fa-chart-line" style="font-size: 4rem; margin-bottom: 1rem;"></i>
+                        <h3>Performance Analytics Dashboard</h3>
+                        <p>Real-time insights into your organization's key performance indicators</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Risk Factors -->
+    <section class="risk-factors">
+        <div class="container">
+            <div class="section-title">
+                <h2>Business Risk Factors Analysis</h2>
+                <p>Identifying and mitigating potential threats to your operational success</p>
+            </div>
+            <div class="risk-grid">
+                <div class="risk-card fade-in">
+                    <div class="risk-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3>Operational Risks</h3>
+                    <p>Process failures, system outages, and workflow disruptions that impact daily operations and productivity.</p>
+                </div>
+                <div class="risk-card fade-in">
+                    <div class="risk-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Security Vulnerabilities</h3>
+                    <p>Data breaches, unauthorized access, and compliance issues that threaten business continuity.</p>
+                </div>
+                <div class="risk-card fade-in">
+                    <div class="risk-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3>Integration Challenges</h3>
+                    <p>Compatibility issues, data silos, and workflow disruptions during technology implementations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="vision">
+        <div class="container">
+            <div class="vision-content">
+                <div class="vision-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h2>Our Vision</h2>
+                <p>"To become the global leader in enterprise automation, transforming how organizations operate by creating seamless, intelligent workflows that empower teams, drive innovation, and deliver unprecedented business value."</p>
+                <p>We envision a future where technology serves as an invisible backbone to business operations, where human creativity is amplified by intelligent automation, and where organizational silos are replaced by fluid, collaborative ecosystems.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-choose" class="why-choose">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Singh Enterprises</h2>
+                <p>Our unique approach delivers results where others fall short</p>
+            </div>
+            <div class="unique-features">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Proprietary AI Technology</h3>
+                    <p>Our custom-built algorithms deliver smarter automation and more accurate predictions than off-the-shelf solutions.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Rapid Implementation</h3>
+                    <p>Average deployment time of 6 weeks versus industry standard of 4-6 months, delivering value faster.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Measurable ROI</h3>
+                    <p>We guarantee specific performance improvements with clear metrics and regular progress reporting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competitive Differentiators -->
+    <section class="differentiators">
+        <div class="container">
+            <div class="section-title">
+                <h2>Competitive Differentiators</h2>
+                <p>What sets us apart in the crowded automation marketplace</p>
+            </div>
+            <div class="diff-container">
+                <div class="diff-content">
+                    <ul class="diff-list">
+                        <li class="diff-item fade-in">
+                            <h3>Holistic Process Integration</h3>
+                            <p>Unlike point solutions, we connect entire workflow ecosystems across departments and systems.</p>
+                        </li>
+                        <li class="diff-item fade-in">
+                            <h3>Adaptive Intelligence</h3>
+                            <p>Our systems learn and evolve with your business, continuously optimizing performance.</p>
+                        </li>
+                        <li class="diff-item fade-in">
+                            <h3>Human-Centric Design</h3>
+                            <p>We enhance rather than replace human capabilities, focusing on augmentation over automation.</p>
+                        </li>
+                        <li class="diff-item fade-in">
+                            <h3>Proactive Optimization</h3>
+                            <p>Our predictive capabilities identify bottlenecks before they impact your operations.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="diff-visual fade-in">
+                    <!-- Differentiator visualization would go here -->
+                    <div style="text-align: center; padding: 2rem;">
+                        <i class="fas fa-trophy" style="font-size: 4rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                        <h3>Market Leadership</h3>
+                        <p>Proven results across 15+ industries</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Clients -->
     <section id="clients">
         <div class="container">
@@ -1031,23 +1547,23 @@
                 <div class="footer-column">
                     <h3>Contact</h3>
                     <ul>
-                        <li><i class="fas fa-envelope"></i> contact@singhenterprises.com</li>
-                        <li><i class="fas fa-user"></i> Priya Sharma, CEO</li>
-                        <li><i class="fas fa-globe"></i> www.singhenterprises.com</li>
+                        <li><i class="fas fa-envelope"></i> info@singh-ent.com</li>
+                        <li><i class="fas fa-user"></i> Litesh Singh</li>
+                        <li><i class="fas fa-globe"></i> www.singh-ent.com</li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="#services">Services</a></li>
-                        <li><a href="#benefits">Benefits</a></li>
-                        <li><a href="#approach">Our Approach</a></li>
-                        <li><a href="#clients">Clients</a></li>
+                        <li><a href="#collaboration">Collaboration</a></li>
+                        <li><a href="#performance">Performance</a></li>
+                        <li><a href="#why-choose">Why Choose Us</a></li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 Singh Enterprises. All rights reserved.</p>
+                <p>&copy; 2025 Singh Enterprises. All rights reserved.</p>
             </div>
         </div>
     </footer>
